@@ -1,13 +1,13 @@
 version: 1
 send_anonymous_usage_stats: true
-project_id: "tap-invoiceexpress"
+project_id: tap-invoiceexpress
 default_environment: test
 environments:
 - name: test
 plugins:
   extractors:
-  - name: "tap-invoiceexpress"
-    namespace: "tap_invoiceexpress"
+  - name: tap-invoiceexpress
+    namespace: tap_invoiceexpress
     pip_url: -e .
     capabilities:
     - state
@@ -15,16 +15,16 @@ plugins:
     - discover
     - about
     - stream-maps
-    config:
-      start_date: '2010-01-01T00:00:00Z'
     settings:
-    # TODO: To configure using Meltano, declare settings and their types here:
-    - name: username
-    - name: password
-      kind: password
+    - name: api_key
+      kind: string
       sensitive: true
     - name: start_date
-      value: '2010-01-01T00:00:00Z'
+      value: '2024-05-20'
+
+    config:
+      api_url: https://rauvaportugalunip.app.invoicexpress.com
+      start_date: '2024-05-20'
   loaders:
   - name: target-jsonl
     variant: andyh1203
