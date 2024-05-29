@@ -19,12 +19,13 @@ plugins:
     - name: api_key
       kind: string
       sensitive: true
-    - name: start_date
-      value: '2024-05-20'
 
     config:
       api_url: https://rauvaportugalunip.app.invoicexpress.com
       start_date: '2024-05-20'
+
+    select:
+    - invoices.*
   loaders:
   - name: target-jsonl
     variant: andyh1203

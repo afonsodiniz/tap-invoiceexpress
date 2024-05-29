@@ -1,15 +1,153 @@
 {
-    "type": "object",
-    "properties": {
-      "id": {
-        "type": "integer"
-      },
-      "status": {
-        "type": "string"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string"
+    },
+    "sequence_number": {
+      "type": "string"
+    },
+    "tax_exemption": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "dd/mm/yyyy"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "dd/mm/yyyy"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "observations": {
+      "type": "string"
+    },
+    "retention": {
+      "type": "null"
+    },
+    "permalink": {
+      "type": "string",
+      "format": "uri"
+    },
+    "sum": {
+      "type": "number"
+    },
+    "discount": {
+      "type": "number"
+    },
+    "before_taxes": {
+      "type": "number"
+    },
+    "taxes": {
+      "type": "number"
+    },
+    "total": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "client": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "address": {
+          "type": "string"
+        },
+        "postal-code": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "fiscal_id": {
+          "type": "string"
+        }
       }
     },
-    "required": [
-      "id", "status"
-    ]
-  }
-  
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "unit_price": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "null"
+          },
+          "quantity": {
+            "type": "string"
+          },
+          "tax": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number"
+              }
+            },
+            "required": ["id", "name", "value"]
+          },
+          "discount": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          },
+          "tax_amount": {
+            "type": "number"
+          },
+          "discount_amount": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          }
+        },
+        "required": ["name", "description", "unit_price", "quantity", "tax", "subtotal", "total"]
+      }
+    },
+    "atcud": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id", "status", "archived", "type", "sequence_number", "tax_exemption", "date", "due_date", "permalink", "sum", "discount", "before_taxes", "taxes", "total", "currency", "client", "items", "atcud"
+  ]
+}
