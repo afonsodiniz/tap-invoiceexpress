@@ -3,89 +3,167 @@
   "type": "object",
   "properties": {
     "id": {
-      "type": "integer"
+      "type": [
+        "null",
+        "integer"
+      ]
     },
     "status": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "archived": {
-      "type": "boolean"
+      "type": [
+        "null",
+        "boolean"
+      ]
     },
     "type": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "sequence_number": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "tax_exemption": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "date": {
-      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
       "format": "dd/mm/yyyy"
     },
     "due_date": {
-      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
       "format": "dd/mm/yyyy"
     },
     "reference": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "observations": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "retention": {
-      "type": "null"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "permalink": {
-      "type": "string",
+      "type": [
+        "null",
+        "string"
+      ],
       "format": "uri"
     },
     "sum": {
-      "type": "number"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "discount": {
-      "type": "number"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "before_taxes": {
-      "type": "number"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "taxes": {
-      "type": "number"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "total": {
-      "type": "number"
+      "type": [
+        "null",
+        "number"
+      ]
     },
     "currency": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     },
     "client": {
       "type": "object",
       "properties": {
         "id": {
-          "type": "integer"
+          "type": [
+            "null",
+            "integer"
+          ]
         },
         "name": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "email": {
-          "type": "string",
+          "type": [
+            "null",
+            "string"
+          ],
           "format": "email"
         },
         "address": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "postal-code": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "country": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "city": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         },
         "fiscal_id": {
-          "type": "string"
+          "type": [
+            "null",
+            "string"
+          ]
         }
       }
     },
@@ -95,59 +173,101 @@
         "type": "object",
         "properties": {
           "name": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "description": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "unit_price": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "unit": {
-            "type": "null"
+            "type": [
+              "null",
+              "integer"
+            ]
           },
           "quantity": {
-            "type": "string"
+            "type": [
+              "null",
+              "string"
+            ]
           },
           "tax": {
             "type": "object",
             "properties": {
               "id": {
-                "type": "integer"
+                "type": [
+                  "null",
+                  "integer"
+                ]
               },
               "name": {
-                "type": "string"
+                "type": [
+                  "null",
+                  "string"
+                ]
               },
               "value": {
-                "type": "number"
+                "type": [
+                  "null",
+                  "number"
+                ]
               }
             },
             "required": ["id", "name", "value"]
           },
           "discount": {
-            "type": "number"
+            "type": [
+              "null",
+              "number"
+            ]
           },
           "subtotal": {
-            "type": "number"
+            "type": [
+              "null",
+              "number"
+            ]
           },
           "tax_amount": {
-            "type": "number"
+            "type": [
+              "null",
+              "number"
+            ]
           },
           "discount_amount": {
-            "type": "number"
+            "type": [
+              "null",
+              "number"
+            ]
           },
           "total": {
-            "type": "number"
+            "type": [
+              "null",
+              "number"
+            ]
           }
         },
         "required": ["name", "description", "unit_price", "quantity", "tax", "subtotal", "total"]
       }
     },
     "atcud": {
-      "type": "string"
+      "type": [
+        "null",
+        "string"
+      ]
     }
   },
   "required": [
-    "id", "status", "archived", "type", "sequence_number", "tax_exemption", "date", "due_date", "permalink", "sum", "discount", "before_taxes", "taxes", "total", "currency", "client", "items", "atcud"
+    "id"
   ]
 }
