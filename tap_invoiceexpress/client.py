@@ -78,10 +78,10 @@ class InvoiceExpressStream(RESTStream):
     ) -> dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization"""
 
-        # params: dict = {
-        #     "api_key": '88ed9dc4797876277ed806ef178ed073dd3a565d',
-        # }
-        params = {}
+        params: dict = {
+            "api_key": '88ed9dc4797876277ed806ef178ed073dd3a565d',
+        }
+        # params = {}
 
         if next_page_token:
             params["page"] = next_page_token
