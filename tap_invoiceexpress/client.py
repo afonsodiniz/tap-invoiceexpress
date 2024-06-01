@@ -34,7 +34,7 @@ class InvoiceExpressStream(RESTStream):
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
 
-        return "https://rauvaportugalunip.app.invoicexpress.com"
+        return "https://rauvaservicesunip.app.invoicexpress.com"
 
     records_jsonpath = "$.invoices[*]"  # Or override `parse_response`.
 
@@ -48,8 +48,7 @@ class InvoiceExpressStream(RESTStream):
             A dictionary of HTTP headers.
         """
         headers = {
-            "accept": "application/json",
-            "Cookie": "_makeover_app_ix_com_session=c72661d24cd0c433bb1883ec590225da"
+            "accept": "application/json"
         }
 
         return headers
@@ -78,10 +77,7 @@ class InvoiceExpressStream(RESTStream):
     ) -> dict[str, Any]:
         """Return a dictionary of values to be used in URL parameterization"""
 
-        params: dict = {
-            "api_key": '88ed9dc4797876277ed806ef178ed073dd3a565d',
-        }
-        # params = {}
+        params = {}
 
         if next_page_token:
             params["page"] = next_page_token
