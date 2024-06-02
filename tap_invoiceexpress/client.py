@@ -34,7 +34,7 @@ class InvoiceExpressStream(RESTStream):
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
 
-        return "https://rauvaservicesunip.app.invoicexpress.com"
+        return "https://rauvaportugalunip.app.invoicexpress.com"
 
     records_jsonpath = "$.invoices[*]"  # Or override `parse_response`.
 
