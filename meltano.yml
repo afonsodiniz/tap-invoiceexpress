@@ -16,13 +16,12 @@ plugins:
     - about
     - stream-maps
     settings:
+    - name: api_url
+      kind: string
+      sensitive: true
     - name: api_key
       kind: string
       sensitive: true
-
-    config:
-      api_url: https://rauvaportugalunip.app.invoicexpress.com
-      start_date: '2024-05-20'
 
     select:
     - invoices.*

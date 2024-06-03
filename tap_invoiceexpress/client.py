@@ -30,11 +30,12 @@ DEFAULT_START_DATE = '2023-01-01T10:00:00.000000Z'
 class InvoiceExpressStream(RESTStream):
     """InvoiceExpress stream class."""
 
+
     @property
     def url_base(self) -> str:
         """Return the API URL root, configurable via tap settings."""
 
-        return "https://rauvaservicesunip.app.invoicexpress.com"
+        return self.config.get("api_url", "")
 
 
     records_jsonpath = "$.invoices[*]"  # Or override `parse_response`.
