@@ -36,6 +36,7 @@ class InvoiceExpressStream(RESTStream):
 
         return "https://rauvaservicesunip.app.invoicexpress.com"
 
+
     records_jsonpath = "$.invoices[*]"  # Or override `parse_response`.
 
     # Set this value or override `get_new_paginator`.
