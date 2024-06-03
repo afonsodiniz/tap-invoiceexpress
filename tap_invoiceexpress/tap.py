@@ -25,7 +25,13 @@ class TapInvoiceExpress(Tap):
             "start_date",
             th.DateTimeType,
             description="The earliest record date to sync",
-        )
+        ),
+        # th.Property(
+        #     "account_type",
+        #     th.StringType,
+        #     required=True,
+        #     description="Type of the account ('tech' or 'services') to specify which API URL to use",
+        # )
     ).to_dict()
 
     def discover_streams(self) -> list[streams.InvoiceExpressStream]:
